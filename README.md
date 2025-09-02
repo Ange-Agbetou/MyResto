@@ -1,6 +1,6 @@
-# 🍽️ Restaurant Pro - Système de Gestion Futuriste
+# 🍽️ MyResto - Système de Gestion Futuriste
 
-![Restaurant Pro](https://img.shields.io/badge/Version-1.0.0-blue.svg)
+![MyResto](https://img.shields.io/badge/Version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)
 ![React](https://img.shields.io/badge/React-18-blue.svg)

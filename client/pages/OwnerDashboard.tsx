@@ -227,40 +227,22 @@ export default function OwnerDashboard() {
               {restaurants.map((restaurant) => (
                 <Card key={restaurant.id} className="glass-dark border-glass-border">
                   <CardContent className="p-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 items-center">
-                      <div className="lg:col-span-2">
-                        <div className="flex items-center space-x-3">
-                          <div className={`w-3 h-3 rounded-full ${restaurant.status === 'active' ? 'bg-green-400' : 'bg-red-400'}`}></div>
-                          <div>
-                            <h3 className="font-semibold text-foreground">{restaurant.name}</h3>
-                            <p className="text-sm text-muted-foreground">{restaurant.location}</p>
-                          </div>
-                        </div>
+                    <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+                      <div>
+                        <h3 className="font-semibold text-foreground">{restaurant.name}</h3>
+                        <p className="text-sm text-muted-foreground">{restaurant.location}</p>
                       </div>
-                      
                       <div className="text-center">
                         <p className="text-sm text-muted-foreground">Revenus</p>
                         <p className="font-bold text-neon-blue">{formatCurrency(restaurant.dailyRevenue)}</p>
                       </div>
-                      
                       <div className="text-center">
                         <p className="text-sm text-muted-foreground">Commandes</p>
                         <p className="font-bold">{restaurant.orders}</p>
                       </div>
-                      
                       <div className="text-center">
                         <p className="text-sm text-muted-foreground">Gérants</p>
                         <p className="font-bold">{restaurant.managers}</p>
-                      </div>
-                      
-                      <div className="flex justify-end space-x-2">
-                        {restaurant.stockAlerts > 0 && (
-                          <Badge variant="destructive" className="text-xs">
-                            <AlertTriangleIcon className="w-3 h-3 mr-1" />
-                            {restaurant.stockAlerts} alerte{restaurant.stockAlerts > 1 ? 's' : ''}
-                          </Badge>
-                        )}
-                        {/* Bouton Voir supprimé */}
                       </div>
                     </div>
                   </CardContent>

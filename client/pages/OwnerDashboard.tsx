@@ -122,10 +122,6 @@ export default function OwnerDashboard() {
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <Button variant="outline" size="sm" className="border-glass-border">
-                <SettingsIcon className="w-4 h-4 mr-2" />
-                Paramètres
-              </Button>
               <Button
                 variant="outline"
                 size="sm"
@@ -142,52 +138,28 @@ export default function OwnerDashboard() {
 
       <main className="container mx-auto px-4 py-8">
         {/* Global Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <Card className="glass border-glass-border neon-glow-blue">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Revenus Total</p>
-                  <p className="text-2xl font-bold text-neon-blue">{formatCurrency(totalRevenue)}</p>
-                </div>
-                <DollarSignIcon className="w-8 h-8 text-neon-blue" />
-              </div>
+  <div className="flex flex-wrap justify-center gap-8 mb-10">
+          <Card className="glass border-glass-border neon-glow-blue min-w-[250px] max-w-[300px] flex-1">
+            <CardContent className="p-6 flex flex-col items-center justify-center">
+              <DollarSignIcon className="w-10 h-10 text-neon-blue mb-2" />
+              <p className="text-sm font-medium text-muted-foreground mb-1">Revenus Total</p>
+              <p className="text-2xl font-bold text-neon-blue">{formatCurrency(totalRevenue)}</p>
             </CardContent>
           </Card>
 
-          <Card className="glass border-glass-border neon-glow-purple">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Commandes</p>
-                  <p className="text-2xl font-bold text-neon-purple">{totalOrders}</p>
-                </div>
-                <TrendingUpIcon className="w-8 h-8 text-neon-purple" />
-              </div>
+          <Card className="glass border-glass-border neon-glow-purple min-w-[250px] max-w-[300px] flex-1">
+            <CardContent className="p-6 flex flex-col items-center justify-center">
+              <TrendingUpIcon className="w-10 h-10 text-neon-purple mb-2" />
+              <p className="text-sm font-medium text-muted-foreground mb-1">Commandes</p>
+              <p className="text-2xl font-bold text-neon-purple">{totalOrders}</p>
             </CardContent>
           </Card>
 
-          <Card className="glass border-glass-border neon-glow-pink">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Restaurants</p>
-                  <p className="text-2xl font-bold text-neon-pink">{restaurants.length}</p>
-                </div>
-                <StoreIcon className="w-8 h-8 text-neon-pink" />
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="glass border-glass-border">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Alertes Stock</p>
-                  <p className="text-2xl font-bold text-orange-400">{totalAlerts}</p>
-                </div>
-                <AlertTriangleIcon className="w-8 h-8 text-orange-400" />
-              </div>
+          <Card className="glass border-glass-border neon-glow-pink min-w-[250px] max-w-[300px] flex-1">
+            <CardContent className="p-6 flex flex-col items-center justify-center">
+              <StoreIcon className="w-10 h-10 text-neon-pink mb-2" />
+              <p className="text-sm font-medium text-muted-foreground mb-1">Restaurants</p>
+              <p className="text-2xl font-bold text-neon-pink">{restaurants.length}</p>
             </CardContent>
           </Card>
         </div>
@@ -234,12 +206,6 @@ export default function OwnerDashboard() {
                 <PlusIcon className="w-4 h-4 mr-2" />
                 Ajouter un Restaurant
               </Button>
-              <Link to="/user-management">
-                <Button variant="outline" className="w-full border-glass-border">
-                  <UsersIcon className="w-4 h-4 mr-2" />
-                  Gérer les Gérants
-                </Button>
-              </Link>
               <Link to="/reports">
                 <Button variant="outline" className="w-full border-glass-border">
                   <BarChart3Icon className="w-4 h-4 mr-2" />
